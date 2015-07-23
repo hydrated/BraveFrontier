@@ -6,13 +6,18 @@ import com.hydra.bf.game.FireCharacter;
 import com.hydra.bf.game.Unit;
 
 public class People {
-	private String name = "Chen Chen";
+	private String name = "";
 	private Consumptive consumptive;
 	private Desire desire;
 	private int count = 0;
 	private ArrayList<Unit> Characters;
 
 	public People() {
+		this("Unknown");
+	}
+	
+	public People(String name) {
+		this.name = name;
 		consumptive = Consumptive.create();
 		desire = Desire.create();
 		Characters = new ArrayList<Unit>();
